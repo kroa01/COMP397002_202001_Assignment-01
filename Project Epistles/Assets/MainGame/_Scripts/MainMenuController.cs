@@ -4,10 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEditor;
 
 namespace SpeedTutorMainMenuSystem
 {
-    public class MenuController : MonoBehaviour
+    public class MainMenuController : MonoBehaviour
     {
         #region Default Values
         [Header("Default Menu Values")]
@@ -132,8 +133,14 @@ namespace SpeedTutorMainMenuSystem
 
             if (buttonType == "Exit")
             {
-                Debug.Log("YES QUIT!");
                 Application.Quit();
+               
+                #if UNITY_EDITOR
+                EditorApplication.isPlaying = false;
+                #else
+		        Application.Quit();
+                Debug.Log("YES QUIT!");
+                #endif
             }
 
             if (buttonType == "Options")

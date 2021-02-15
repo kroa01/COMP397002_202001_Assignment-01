@@ -390,7 +390,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &224234810426151292
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3979,7 +3979,7 @@ MonoBehaviour:
   loadGameDialog: {fileID: 1443681062563508}
   controllerSenText: {fileID: 114036040233595794}
   controllerSenSlider: {fileID: 114866046668010596}
-  controlSenFloat: 2
+  controlSenFloat: 4
   brightnessEffect: {fileID: 0}
   brightnessSlider: {fileID: 114414691622253428}
   brightnessText: {fileID: 114954420297510558}
@@ -4085,7 +4085,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &224588527476063606
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4431,7 +4431,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2
+  m_Text: 4
 --- !u!1 &1491967241285874
 GameObject:
   m_ObjectHideFlags: 0
@@ -8186,7 +8186,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &224338451749987006
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8960,7 +8960,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &224362640284649458
 RectTransform:
   m_ObjectHideFlags: 0

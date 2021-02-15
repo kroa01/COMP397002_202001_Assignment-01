@@ -30,7 +30,7 @@ namespace SpeedTutorMainMenuSystem
 
         [Space(20)]
         [SerializeField] private bool canUse = false;
-        [SerializeField] private MenuController menuController;
+        [SerializeField] private MainMenuController mainMenuController;
         #endregion
 
         private void Awake()
@@ -53,7 +53,7 @@ namespace SpeedTutorMainMenuSystem
 
                     else
                     {
-                        menuController.ResetButton("Brightness");
+                        mainMenuController.ResetButton("Brightness");
                     }
                 }
 
@@ -68,7 +68,7 @@ namespace SpeedTutorMainMenuSystem
                 }
                 else
                 {
-                    menuController.ResetButton("Audio");
+                    mainMenuController.ResetButton("Audio");
                 }
 
                 //CONTROLLER SENSITIVITY
@@ -78,11 +78,11 @@ namespace SpeedTutorMainMenuSystem
 
                     controllerText.text = localSensitivity.ToString("0");
                     controllerSlider.value = localSensitivity;
-                    menuController.controlSenFloat = localSensitivity;
+                    mainMenuController.controlSenFloat = localSensitivity;
                 }
                 else
                 {
-                    menuController.ResetButton("Graphics");
+                    mainMenuController.ResetButton("Graphics");
                 }
 
                 //INVERT Y
