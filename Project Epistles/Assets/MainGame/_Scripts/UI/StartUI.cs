@@ -17,6 +17,9 @@ namespace Gamekit3D
         public GameObject optionsCanvas;
         public GameObject controlsCanvas;
         public GameObject audioCanvas;
+        public GameObject panelCanvas;
+        public bool isOnScreen = false;
+
 
         protected bool m_InPause;
         protected PlayableDirector[] m_Directors;
@@ -35,8 +38,6 @@ namespace Gamekit3D
             }
 
             m_Directors = FindObjectsOfType<PlayableDirector> ();
-
-
 
         }
 
@@ -70,6 +71,28 @@ namespace Gamekit3D
             {
                 SwitchPauseState();
             }
+
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                panelCanvas.SetActive(!panelCanvas.activeInHierarchy);
+                isOnScreen = !isOnScreen;
+
+
+                if (!isOnScreen)
+                {
+                    Cursor.lockState = CursorLockMode.Locked;
+                    Cursor.visible = false;
+                    PlayerInput.Instance.GainControl();
+                }
+                else
+                {
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
+                    PlayerInput.Instance.ReleaseControl();
+                }
+
+            }
+
         }
 
         protected void SwitchPauseState()
