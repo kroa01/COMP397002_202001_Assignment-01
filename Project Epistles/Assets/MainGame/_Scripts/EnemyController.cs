@@ -76,11 +76,11 @@ namespace Gamekit3D
 
             RaycastHit hit;
             Vector3 movement = m_ExternalForce * Time.deltaTime;
-            if (!m_Rigidbody.SweepTest(movement.normalized, out hit, movement.sqrMagnitude))
-            {
-                m_Rigidbody.MovePosition(m_Rigidbody.position + movement);
-            }
-
+            //if (!m_Rigidbody.SweepTest(movement.normalized, out hit, movement.sqrMagnitude))
+            //{
+            //    m_Rigidbody.MovePosition(m_Rigidbody.position + movement);
+            //}
+            m_Rigidbody.MovePosition(m_Rigidbody.position + movement);
             m_NavMeshAgent.Warp(m_Rigidbody.position);
         }
 
@@ -97,11 +97,12 @@ namespace Gamekit3D
             else
             {
                 RaycastHit hit;
-                if (!m_Rigidbody.SweepTest(m_Animator.deltaPosition.normalized, out hit,
-                    m_Animator.deltaPosition.sqrMagnitude))
-                {
-                    m_Rigidbody.MovePosition(m_Rigidbody.position + m_Animator.deltaPosition);
-                }
+                //if (!m_Rigidbody.SweepTest(m_Animator.deltaPosition.normalized, out hit,
+                //    m_Animator.deltaPosition.sqrMagnitude))
+                //{
+                //    m_Rigidbody.MovePosition(m_Rigidbody.position + m_Animator.deltaPosition);
+                //}
+                m_Rigidbody.MovePosition(m_Rigidbody.position + m_Animator.deltaPosition);
             }
 
             if (applyAnimationRotation)
