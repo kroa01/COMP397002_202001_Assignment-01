@@ -8,6 +8,7 @@ namespace Gamekit3D
 {
     public class CameraSettings : MonoBehaviour
     {
+
         public enum InputChoice
         {
             KeyboardAndMouse, Controller,
