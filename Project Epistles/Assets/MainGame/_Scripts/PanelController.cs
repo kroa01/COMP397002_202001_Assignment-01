@@ -15,9 +15,9 @@ public class PanelController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            panelCanvas.SetActive(!panelCanvas.activeInHierarchy);
-        }
+        //if (Input.GetKeyDown(KeyCode.E))
+        //{
+        //    panelCanvas.SetActive(!panelCanvas.activeInHierarchy);
+        //}
     }
 }

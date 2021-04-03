@@ -15,7 +15,6 @@ public class PlayerInput : MonoBehaviour
     public float rightStickHorizontalSensitivity;
     public float rightStickVerticalSensitivity;
 
-
     [Header("Camera")]
     //public float speed = 7.5f;
     //public float jumpSpeed = 8.0f;
@@ -28,6 +27,9 @@ public class PlayerInput : MonoBehaviour
     public CinemachineFreeLook freeLookCam;
     CinemachineOrbitalTransposer xAxis;
 
+    [Header("ButtonObjects")]
+    public GameObject miniMap;
+    public GameObject inventoryCanvas;
 
     public static PlayerInput Instance
     {
@@ -92,6 +94,7 @@ public class PlayerInput : MonoBehaviour
 
     void Awake()
     {
+
         m_AttackInputWait = new WaitForSeconds(k_AttackInputDuration);
         m_JumpInputWait = new WaitForSeconds(k_JumpInputDuration);
 
@@ -165,10 +168,14 @@ public class PlayerInput : MonoBehaviour
     public void ToggleMinimap()
     {
         // toggle the MiniMap on/off
-        //miniMap.SetActive(!miniMap.activeInHierarchy);
+        miniMap.SetActive(!miniMap.activeInHierarchy);
     }
 
-
+    public void ToggleInventory()
+    {
+        // toggle the inventory panel on/off
+        inventoryCanvas.SetActive(!inventoryCanvas.activeInHierarchy);
+    }
 
     public void DoAttack()
     {
