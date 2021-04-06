@@ -119,11 +119,12 @@ public class PlayerInput : MonoBehaviour
         //controller.Move(move * maxSpeed * Time.deltaTime);
 
         // camera
-        float mouseX = rightStick.Horizontal * rightStickHorizontalSensitivity;
-        float mouseY = rightStick.Vertical * rightStickVerticalSensitivity;
+        float camX = rightStick.Horizontal * rightStickHorizontalSensitivity;
+        float camY = rightStick.Vertical * rightStickVerticalSensitivity;
         //m_Camera.Set(mouseX, mouseY);
-        freeLookCam.m_XAxis.Value += mouseX * 3f;
-        freeLookCam.m_YAxis.Value -= mouseY * 0.1f;
+        freeLookCam.m_XAxis.Value += camX * 3f;
+        freeLookCam.m_YAxis.Value -= camY * 0.1f;
+
         //Camera.main.transform.Rotate(m_Camera);
         //rotation.y += rightStick.Horizontal * lookSpeed;
         //rotation.x += -rightStick.Vertical * lookSpeed;
