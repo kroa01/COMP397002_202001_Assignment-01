@@ -53,7 +53,7 @@ namespace SpeedTutorMainMenuSystem
 
                     else
                     {
-                        mainMenuController.ResetButton("Brightness");
+                        //mainMenuController.ResetButton("Brightness");
                     }
                 }
 
@@ -68,7 +68,7 @@ namespace SpeedTutorMainMenuSystem
                 }
                 else
                 {
-                    mainMenuController.ResetButton("Audio");
+                    //mainMenuController.ResetButton("Audio");
                 }
 
                 //CONTROLLER SENSITIVITY
@@ -82,7 +82,7 @@ namespace SpeedTutorMainMenuSystem
                 }
                 else
                 {
-                    mainMenuController.ResetButton("Graphics");
+                    //mainMenuController.ResetButton("Graphics");
                 }
 
                 //INVERT Y

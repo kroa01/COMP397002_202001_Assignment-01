@@ -36,8 +36,12 @@ namespace Gamekit3D
         public RandomAudioPlayer deathAudio;
         public RandomAudioPlayer spottedAudio;
 
+        public int ID { get; set; }
+
+
         public EnemyController controller { get { return m_Controller; } }
         public PlayerController target { get { return m_Target; } }
+
 
         protected PlayerController m_Target = null;
         protected EnemyController m_Controller;

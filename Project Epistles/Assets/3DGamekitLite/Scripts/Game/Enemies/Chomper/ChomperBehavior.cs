@@ -42,6 +42,8 @@ namespace Gamekit3D
         public RandomAudioPlayer deathAudio;
         public RandomAudioPlayer spottedAudio;
 
+        public int ID { get; set; }
+
         protected float m_TimerSinceLostTarget = 0.0f;
 
         protected PlayerController m_Target = null;

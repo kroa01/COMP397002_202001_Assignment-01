@@ -83,8 +83,6 @@ namespace Gamekit3D
             controllerCamera.Follow = follow;
             controllerCamera.LookAt = lookAt;
 
-
-
             keyboardAndMouseCamera.Priority = inputChoice == InputChoice.KeyboardAndMouse ? 1 : 0;
             controllerCamera.Priority = inputChoice == InputChoice.Controller ? 1 : 0;
 

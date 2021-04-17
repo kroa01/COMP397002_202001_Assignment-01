@@ -31,6 +31,10 @@ public class PlayerInput : MonoBehaviour
     public GameObject miniMap;
     public GameObject inventoryCanvas;
 
+    public CursorLockMode cursor = CursorLockMode.None;
+    public GameObject pauseCanvas; 
+
+
     public static PlayerInput Instance
     {
         get { return s_Instance; }
@@ -92,9 +96,10 @@ public class PlayerInput : MonoBehaviour
     Coroutine m_JumpWaitCoroutine;
     const float k_JumpInputDuration = 0.5f;
 
+
     void Awake()
     {
-
+        
         m_AttackInputWait = new WaitForSeconds(k_AttackInputDuration);
         m_JumpInputWait = new WaitForSeconds(k_JumpInputDuration);
 
@@ -125,6 +130,8 @@ public class PlayerInput : MonoBehaviour
         freeLookCam.m_XAxis.Value += camX * 3f;
         freeLookCam.m_YAxis.Value -= camY * 0.1f;
 
+        
+
         //Camera.main.transform.Rotate(m_Camera);
         //rotation.y += rightStick.Horizontal * lookSpeed;
         //rotation.x += -rightStick.Vertical * lookSpeed;
@@ -144,9 +151,14 @@ public class PlayerInput : MonoBehaviour
         //    m_AttackWaitCoroutine = StartCoroutine(AttackWait());
         //}
 
-        m_Pause = Input.GetButtonDown ("Pause");
     }
-
+    public void PauseGame()
+    {
+        //pauseCanvas.SetActive(!pauseCanvas.activeInHierarchy);
+        //StartUI.SwitchPauseState();
+        m_Pause = !m_Pause;
+    }
+    
 
     public void DoJump()
     {
