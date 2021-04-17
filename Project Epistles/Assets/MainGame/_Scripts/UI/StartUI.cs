@@ -41,7 +41,10 @@ namespace Gamekit3D
 
         }
 
-
+        public void Pause()
+        {
+            SwitchPauseState();
+        }
 
         public void Quit()
         {
@@ -140,7 +143,7 @@ namespace Gamekit3D
             if (audioCanvas)
                 audioCanvas.SetActive(false);
 
-            //m_InPause = !m_InPause;
+            m_InPause = !m_InPause;
         }
 
     }

@@ -158,6 +158,8 @@ public class PlayerInput : MonoBehaviour
         //StartUI.SwitchPauseState();
         m_Pause = !m_Pause;
     }
+
+
     
 
     public void DoJump()
