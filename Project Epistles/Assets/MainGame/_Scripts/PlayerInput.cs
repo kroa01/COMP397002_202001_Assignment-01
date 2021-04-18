@@ -30,6 +30,7 @@ public class PlayerInput : MonoBehaviour
     [Header("ButtonObjects")]
     public GameObject miniMap;
     public GameObject inventoryCanvas;
+    public GameObject achievmentsCanvas;
 
     public CursorLockMode cursor = CursorLockMode.None;
     public GameObject pauseCanvas; 
@@ -186,11 +187,19 @@ public class PlayerInput : MonoBehaviour
         miniMap.SetActive(!miniMap.activeInHierarchy);
     }
 
+
     public void ToggleInventory()
     {
         // toggle the inventory panel on/off
         inventoryCanvas.SetActive(!inventoryCanvas.activeInHierarchy);
     }
+
+    public void ToggleAchievements()
+    {
+        // toggle the achievements panel on/off
+        achievmentsCanvas.SetActive(!achievmentsCanvas.activeInHierarchy);
+    }
+
 
     public void DoAttack()
     {
